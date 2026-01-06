@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neurovibe — Student Tech Collective</title>
+  <meta name="description" content="Neurovibe — a student-led tech company building meaningful projects." />
+  <style>
+    :root{
+      --accent: #7c3aed; /* violet */
+      --bg: #0f172a;
+      --muted: #94a3b8;
+      --card: #ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#f8fafc,white);color:#061028;line-height:1.5}
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid #eef2ff;background:rgba(255,255,255,0.6);backdrop-filter:blur(4px)}
+    .brand{font-weight:800;color:var(--accent);letter-spacing:0.2px}
+    nav{display:flex;gap:1rem}
+    nav a{color:inherit;text-decoration:none}
+    .btn{background:var(--accent);color:#fff;padding:.55rem .95rem;border-radius:10px;text-decoration:none;font-weight:600}
+    .container{max-width:1100px;margin:0 auto;padding:2rem 1rem}
+    .hero{display:grid;gap:1.25rem;grid-template-columns:1fr;align-items:center}
+    h1{font-size:2rem;margin:.25rem 0}
+    p.lead{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+    .card{padding:1rem;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(15,23,42,0.06);border:1px solid rgba(14,27,81,0.04)}
+    footer{padding:1.25rem;text-align:center;color:var(--muted);border-top:1px solid #f1f5f9;margin-top:2rem}
+    .meta{color:var(--muted);font-size:.95rem}
+    .hero-cta{display:flex;gap:.6rem;margin-top:.8rem}
+    .team-grid{display:flex;gap:.75rem;flex-wrap:wrap}
+    .member{padding:.6rem .75rem;border-radius:10px;background:#fbfbff;border:1px solid #f0efff;font-weight:600}
+    /* mobile nav */
+    .menu-toggle{display:none;background:transparent;border:0;font-size:1.15rem}
+    @media(min-width:820px){.menu-toggle{display:none}nav{display:flex}}
+    @media(max-width:819px){nav{display:none}.menu-toggle{display:inline-block}}
+    .mobile-nav{display:none;padding:1rem;border-top:1px solid #eee}
+    .mobile-nav.show{display:block}
+    /* dark mode */
+    .dark { --bg:#060714; --card:#0b1220; --muted:#9aa7c3; color: #e6eef8; background: linear-gradient(180deg,#071029,#060714) }
+    .dark header{background:rgba(2,6,23,0.6);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .dark .card{background:var(--card);border:1px solid rgba(255,255,255,0.03);box-shadow:none}
+    .small{font-size:.9rem}
+    form input, form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e9ef;background:transparent}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body id="page">
+  <header>
+    <div style="display:flex;gap:.8rem;align-items:center">
+      <div class="brand">Neurovibe</div>
+      <div class="meta small">Student-led • AI • Web • Research</div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#about">About</a>
+      <a class="btn" href="#join">Join</a>
+    </nav>
+
+    <div style="display:flex;gap:.6rem;align-items:center">
+      <button id="darkBtn" class="menu-toggle" aria-label="Toggle dark mode">🌓</button>
+      <button id="menuBtn" class="menu-toggle" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#projects">Projects</a><br/>
+    <a href="#team">Team</a><br/>
+    <a href="#about">About</a><br/>
+    <a class="btn" href="#join">Join</a>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Neurovibe — Student tech collective building tomorrow's tools</h1>
+        <p class="lead">We’re a group of students designing AI, web and research projects that solve real problems. We build fast, learn together, and ship often.</p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a href="#join" class="small muted" style="align-self:center;text-decoration:none">Join our team →</a>
+        </div>
+
+        <p style="margin-top:1rem" class="muted small">Based at universities — open to collaborators, interns, and sponsors.</p>
+      </div>
+
+      <img src="https://via.placeholder.com/640x380?text=Neurovibe+Projects" alt="Neurovibe projects" style="width:100%;border-radius:12px;max-height:360px;object-fit:cover">
+    </section>
+
+    <section id="projects" style="margin-top:2rem">
+      <h2>Featured projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>NeuroLab — lightweight ML experiments</h3>
+          <p class="muted">Rapid prototyping environment for student ML projects with notebooks, datasets, and reproducible runs.</p>
+        </div>
+        <div class="card">
+          <h3>VibeChat — research chat UI</h3>
+          <p class="muted">A privacy-first chat interface for exploring model behaviour and user studies.</p>
+        </div>
+        <div class="card">
+          <h3>Campus Tools</h3>
+          <p class="muted">Utility apps to help students — scheduling, study timers, and collaboration boards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" style="margin-top:2rem">
+      <h2>Core team</h2>
+      <div class="team-grid" style="margin-top:.6rem">
+        <div class="member">Alex — ML & product</div>
+        <div class="member">Sam — Frontend & design</div>
+        <div class="member">Ish — Research & data</div>
+        <div class="member">Rhea — Outreach</div>
+      </div>
+      <p class="muted small" style="margin-top:.6rem">More contributors welcome — we mentor and onboard new members each term.</p>
+    </section>
+
+    <section id="about" style="margin-top:2rem">
+      <h2>About Neurovibe</h2>
+      <p class="muted">Founded by students with backgrounds in CS, neuroscience, and design. We focus on practical projects that teach, impact, and lead to open-source releases.</p>
+    </section>
+
+    <section id="join" style="margin-top:2rem">
+      <h2>Join / Contact</h2>
+      <form onsubmit="event.preventDefault();alert('Thanks — we will reach out! Replace this with real form handling (email/API).')">
+        <label class="small" style="display:block;margin-bottom:.4rem">Name</label>
+        <input type="text" placeholder="Your name" required style="margin-bottom:.6rem">
+        <label class="small" style="display:block;margin-bottom:.4rem">Email</label>
+        <input type="email" placeholder="you@school.edu" required style="margin-bottom:.6rem">
+        <label class="small" style="display:block;margin-bottom:.4rem">Message</label>
+        <textarea rows="4" placeholder="I can help with..." style="margin-bottom:.6rem"></textarea>
+        <div style="display:flex;gap:.6rem">
+          <button class="btn" type="submit">Send</button>
+          <a href="#" class="small muted" style="align-self:center;text-decoration:none">Or email: hello@neurovibe.example</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Neurovibe — Student tech collective. Built with ❤️.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn && menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('show');
+      mobileNav.setAttribute('aria-hidden', String(expanded));
+    });
+
+    // simple local dark-mode toggle
+    const darkBtn = document.getElementById('darkBtn');
+    const page = document.getElementById('page');
+    const saved = localStorage.getItem('neurovibe-dark');
+    if (saved === '1') page.classList.add('dark');
+    darkBtn && darkBtn.addEventListener('click', () => {
+      page.classList.toggle('dark');
+      localStorage.setItem('neurovibe-dark', page.classList.contains('dark') ? '1' : '0');
+    });
+  </script>
+</body>
+</html>
