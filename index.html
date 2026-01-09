@@ -2,105 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>NeuroVibe | AI for Students</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neurovibe</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Neurovibe - A student-made tech startup building AI tools and student technology.">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <h2 class="logo">Neurovibe</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>NEUROVIBE</h1>
-      <p>Engineering the Future with Intelligence</p>
-      <a href="#services" class="btn">Explore</a>
-    </div>
+  <header>
+    <div class="logo">Neuro<span>Vibe</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h1>Welcome to <span>NeuroVibe</span></h1>
+    <p>Building AI tools for students. Smart. Simple. Powerful.</p>
+    <a href="#about" class="btn">Explore</a>
+  </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>About Us</h2>
-    <p class="center-text">
-      Neurovibe is a <b>student-made tech startup</b> creating intelligent solutions for students, creators, and innovators.
-      Our mission is to turn ideas into real technology.
+    <h2>About NeuroVibe</h2>
+    <p>
+      NeuroVibe is a student-made tech startup focused on creating AI-powered tools
+      for learning, productivity, and innovation. Our mission is to make technology
+      accessible, powerful, and student-friendly.
     </p>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section dark">
-    <h2>What We Do</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>AI Solutions</h3>
-        <p>Real-world AI apps for students, creators, and startups.</p>
-      </div>
-      <div class="card">
-        <h3>Web & App Development</h3>
-        <p>Modern, secure, and responsive websites and applications.</p>
-      </div>
-      <div class="card">
-        <h3>Automation</h3>
-        <p>Smart systems that save time and boost productivity.</p>
-      </div>
-    </div>
-  </section>
+  <!-- TEAM / LEADERSHIP -->
+  <section id="team" class="info-section">
+    <h2>Company Leadership</h2>
+    <p class="subtitle">Meet the minds behind NeuroVibe</p>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Our Projects</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Stutech</h3>
-        <p>Advanced student toolkit built by Neurovibe.</p>
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>Lavanya Sharma</h3>
+        <p class="role">CEO & Founder</p>
       </div>
-      <div class="card">
-        <h3>AI Tools</h3>
-        <p>Next-gen AI apps designed for learning and productivity.</p>
-      </div>
-      <div class="card">
-        <h3>Future Labs</h3>
-        <p>Experimental technology shaping tomorrow.</p>
+
+      <div class="info-card">
+        <h3>Abhyam Verma</h3>
+        <p class="role">Co-Founder & COO</p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section dark">
-    <h2>Contact</h2>
-    <p class="center-text">Let’s build something powerful together.</p>
+  <section id="contact" class="contact-info">
+    <h2>Get in Touch</h2>
+    <p class="subtitle">Let’s build the future together</p>
+
     <div class="contact-box">
-      <p>Email: <b>neurovibe@email.com</b></p>
-      <p>GitHub: <b>github.com/yourusername</b></p>
+      <p><strong>Company:</strong> NeuroVibe</p>
+      <p><strong>Phone:</strong> 6005651167</p>
+      <p><strong>Powered by:</strong> Student Innovation</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Neurovibe. All Rights Reserved.</p>
-  </footer>
-
-  <!-- SCROLL FADE-IN SCRIPT -->
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-  </script>
-
 </body>
 </html>
+
